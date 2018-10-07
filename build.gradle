@@ -12,8 +12,8 @@ buildscript {
     }
 
     dependencies {
-        classpath("net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT")
-        classpath("org.spongepowered:mixingradle:0.6-SNAPSHOT")
+        classpath("net.minecraftforge.gradle:ForgeGradle:2.2-SNAPSHOT")
+        classpath("org.spongepowered:mixingradle:0.4-SNAPSHOT")
     }
 }
 
@@ -27,12 +27,12 @@ targetCompatibility = 1.8
 
 group = "io.github.lxgaming"
 archivesBaseName = "Sledgehammer"
-version = "1.12.2-1.2.14"
+version = "1.10.2-1.2.14"
 
 minecraft {
-    version = "1.12.2-14.23.5.2768"
+    version = "1.10.2-12.18.3.2511"
     runDir = "run"
-    mappings = "snapshot_20171003"
+    mappings = "snapshot_20161111"
     makeObfSourceJar = false
 }
 
@@ -63,16 +63,15 @@ repositories {
 }
 
 dependencies {
-    annotationProcessor("org.spongepowered:spongecommon:7.1.0:dev")
-    provided("org.spongepowered:spongecommon:7.1.0:dev") {
+    annotationProcessor("org.spongepowered:spongecommon:5.2.0-SNAPSHOT:dev")
+    provided("org.spongepowered:spongecommon:5.2.0-SNAPSHOT:dev") {
         exclude(module: "commons-io")
         exclude(module: "gson")
         exclude(module: "guava")
         exclude(module: "launchwrapper")
     }
-    provided("org.spongepowered:spongeforge:1.12.2-2705-7.1.0-BETA-3361:dev")
-    provided("org.spongepowered:spongevanilla:1.12.2-7.1.0-BETA-59:dev")
-    provided("primalcore:PrimalCore:1.12.2:0.6.51")
+    provided("org.spongepowered:spongeforge:1.10.2-2477-5.2.0-BETA-2793:dev")
+    provided("org.spongepowered:spongevanilla:1.10.2-5.2.0-BETA-403:dev")
 }
 
 jar {

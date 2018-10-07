@@ -77,7 +77,7 @@ public class Toolbox {
      * @return The filtered {@link java.lang.String String}.
      */
     public static String filter(String string) {
-        return StringUtils.replaceAll(string, "[^\\x20-\\x7E\\x0A\\x0D]", "");
+        return string.replaceAll("[^\\x20-\\x7E\\x0A\\x0D]", "");
     }
     
     public static boolean containsIgnoreCase(Collection<String> list, String targetString) {
