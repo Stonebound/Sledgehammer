@@ -53,8 +53,8 @@ public class ForgePlugin extends AbstractPlugin {
         
         if (INITIALIZED
                 || SledgehammerLaunch.isDeobfuscatedEnvironment()
-                || !SledgehammerLaunch.isForgeRegistered()
-                || !SledgehammerLaunch.isSledgehammerRegistered()
+                || !SledgehammerLaunch.isForgeInitialized()
+                || !SledgehammerLaunch.isSledgehammerInitialized()
                 || MappingManager.MOD_MAPPINGS.isEmpty()) {
             return;
         }
@@ -130,7 +130,7 @@ public class ForgePlugin extends AbstractPlugin {
     
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
-        if (!SledgehammerLaunch.isForgeRegistered()) {
+        if (!SledgehammerLaunch.isForgeInitialized()) {
             return false;
         }
         
